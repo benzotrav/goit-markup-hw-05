@@ -144,16 +144,16 @@ img {
 .header-link.current::after {
   content: "";
   position: absolute;
-  display: block;
   width: 100%;
+  left: 0;
+  bottom: 0px;
+  background-color: #2196f3;
   height: 4px;
-  left: 0px;
-  bottom: -1px;
-  background: #2196f3;
   border-radius: 2px;
 }
 .current {
   position: relative;
+  color: #2196f3;
 }
 
 /* Шапка */
@@ -209,6 +209,11 @@ img {
   height: 50px;
   margin: 0 auto;
   padding: 10px 32px;
+}
+.backdrop {
+  width: 341px;
+  height: 341px;
+  background-color: #fff;
 }
 
 /* Гарантии */
