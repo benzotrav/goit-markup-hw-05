@@ -211,9 +211,44 @@ img {
   padding: 10px 32px;
 }
 .backdrop {
-  width: 341px;
-  height: 341px;
-  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 350ms, visibility 350ms;
+}
+.backdrop.is-hidden {
+  display: none;
+}
+.modal-div {
+  z-index: 1;
+  width: 528px;
+  height: 581px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(1) rotate(0) translate(-50%, -50%);
+  transition: transform 350ms;
+}
+.modal-btn {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  left: 1026px;
+  top: 229px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 8px;
+  margin-top: 8px;
 }
 
 /* Гарантии */
@@ -303,6 +338,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+  z-index: 0;
 }
 .photo-img {
 }
@@ -592,8 +628,8 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   width: 370px;
-  cursor: pointer;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  flex-basis: calc(100% / 3 - 30px);
 }
 .maincontant-li:focus,
 .maincontant-li:hover {
@@ -608,8 +644,35 @@ img {
 .maincontant-li:nth-child(3n) {
   margin-right: 0px;
 }
-
+.maincontant-div-img {
+  position: relative;
+  overflow: hidden;
+}
+.maincontant-link {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
 .maincontant-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.maincontant-overflow-p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
 }
 .maincontant-h3 {
   font-weight: 700;
