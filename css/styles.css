@@ -137,13 +137,13 @@ img {
 .header-link2:hover {
   color: #2196f3;
 }
-.header-li.current::after {
+.header-link.current::after {
   content: "";
-  position: absolute;
-  width: 48px;
+  position: relative;
+  width: 100%;
   height: 4px;
-  left: 453px;
-  top: 76px;
+  left: 0px;
+  bottom: -1px;
   background: #2196f3;
   border-radius: 2px;
 }
