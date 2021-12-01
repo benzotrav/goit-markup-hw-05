@@ -209,6 +209,8 @@ img {
   height: 50px;
   margin: 0 auto;
   padding: 10px 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop {
   width: 100vw;
@@ -218,12 +220,12 @@ img {
   top: 0;
   left: 0;
   transition: opacity 350ms, visibility 350ms;
+  z-index: 1;
 }
 .backdrop.is-hidden {
   display: none;
 }
 .modal-div {
-  z-index: 1;
   width: 528px;
   height: 581px;
   background-color: #ffffff;
@@ -338,7 +340,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-  z-index: 0;
 }
 .photo-img {
 }
@@ -672,6 +673,11 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
+}
+.maincontant-link:hover .maincontant-overflow-p,
+.maincontant-link:focus .maincontant-overflow-p {
+  transform: translateY(0);
+  opacity: 1;
 }
 .maincontant-h3 {
   font-weight: 700;
